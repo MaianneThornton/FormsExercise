@@ -15,7 +15,7 @@
       <legend>Customer Experience Survey</legend>
       <label for="storeNumber">Store Number</label>
       <select name="storeNumber" id="storeNumber">
-        <option hidden="">Select A Store</option>
+        <option hidden>Select A Store</option>
         <option value="3109">3109</option>
         <option value="2421">2421</option>
         <option value="5357">5357</option>
@@ -24,15 +24,18 @@
         <legend>When you visited:</legend>
         <label for="dateVisited">Date Visited</label>
         <input type="date" name="dateVisited" id="dateVisited" min="2021-01-01" max="2021-12-31">
-        <br>
-        <label for="time">Time</label>
-        <input type="time" name="time" id="time">
+        <div>
+          <label for="time">Time</label>
+          <input type="time" name="time" id="time">
+        </div>
       </fieldset>
-      <label for="name">Full Name:</label>
-      <input type="text" placeholder="Name">
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" placeholder="Email">
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+      </div>
       <fieldset>
         <legend>Gender</legend>
         <input type="radio" name="gender" id="male" value="male">
@@ -40,24 +43,32 @@
         <br>
         <input type="radio" name="gender" id="female" value="female" checked>
         <label for="female">Female</label>
+        <br>
+        <input type="radio" name="gender" id="non-binary" value="non-binary">
+        <label for="non-binary">Non-binary</label>
+        <br>
+        <input type="radio" name="gender" id="noAnswer" value="noAnswer">
+        <label for="noAnswer">Prefer Not to Answer</label>
       </fieldset>
-      <label for="experience">Tell us about your experience:</label>
-      <br>
-      <textarea name="experience" id="experience" cols="20" rows="2"></textarea>
-      <br>
-      <label for="visits">Times visited in the last month:</label>
-      <br>
-      <input type="number" name="visits" id="visits" min="1" max="30">
-      <br>
-      <input type="checkbox" name="contact" id="contact" required>
-      <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>
-      <br>
-      <label for="pw">Password</label>
-      <input type="password" name="pw" id="pw" minlength="5" maxlength="10"
-        oninvalid="setCustomValidity('Please enter a password that is 5 to 10 characters in length')">
-      <br>
-      <input type="reset">
-      <input type="submit">
+      <div>
+        <label for="experience">Tell us about your experience:</label>
+        <br>
+        <textarea name="experience" id="experience" cols="20" rows="2"></textarea>
+        <br>
+        <label for="visits">Times visited in the last month:</label>
+        <br>
+        <input type="number" name="visits" id="visits" min="1" max="30">
+        <br>
+        <input type="checkbox" name="contact" id="contact" required>
+        <label for="contact">Please check the box if you would be willing to be contacted about your experience</label>
+        <br>
+        <label for="pw">Password</label>
+        <input type="password" name="pw" id="pw" pattern=".{5,10}"
+          title="Please enter a password that is 5 to 10 characters in length">
+        <br>
+        <input type="reset">
+        <input type="submit">
+      </div>
     </fieldset>
 
 </body>
